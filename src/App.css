@@ -1,7 +1,124 @@
 .App {
   text-align: center;
 }
+/* style.css*/
+@media (max-width: 576px) {
+  .hero-bg h1 {
+    font-size: 2rem; /* Smaller font size for small screens */
+  }
+  .hero-bg p {
+    font-size: 1rem;
+  }
+  .hero-bg .btn {
+    padding: 0.75rem 1.5rem; /* Adjust button size */
+  }
+}
+.hero-bg {
+  background: url('https://images.unsplash.com/photo-1553322396-0c9cd410975e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGV0JTIwbG92ZXJ8ZW58MHx8MHx8fDA%3D') no-repeat center center;
+  background-size: cover; /* Ensure the image covers the section */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
+nav {
+  background-color: #0d6efd;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul li a:hover {
+  color: lightgreen;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+    order: 1;
+    margin-right: 20px;
+  }
+
+  ul {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    background-color: green;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+
+  ul li {
+    margin: 20px 0;
+  }
+
+  ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+}
+
+.hero-section-div {
+  opacity: 50%;
+}
+.navbar-div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: horizontal;
+}
+.service-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: horizontal;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +152,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+.breeding-header {
+  font-family: 'Arial', sans-serif;
+  color: #0066cc; /* A distinct shade of blue */
+}
+
+.breed-image {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  border-color: #004080;
+}
+.hero-bg {
+  background-color: #007bff; /* Primary bootstrap color */
+  min-height: 100vh;
+}
+
+.breeding-section {
+  background-color: #e9f7fe;
+  padding: 50px;
 }
